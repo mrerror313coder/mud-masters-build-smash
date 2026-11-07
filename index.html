@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#8bd4ff" />
+    <title>Mud Masters: Build &amp; Smash</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">MUD MASTERS</p>
+          <h1>Build &amp; Smash</h1>
+        </div>
+        <div class="phase-pill" id="phaseLabel">1 · MIX &amp; BUILD</div>
+      </header>
+
+      <section class="stage-wrap" aria-label="Mud Masters game">
+        <canvas id="gameCanvas" aria-label="Interactive mud sandbox"></canvas>
+        <div class="splat-overlay" id="splatOverlay" aria-hidden="true"></div>
+        <div class="toast" id="toast" role="status"></div>
+        <div class="help-bubble" id="helpBubble">Drag the hose, then stamp some mud!</div>
+      </section>
+
+      <section class="controls" id="controls">
+        <div class="control-row" id="buildControls">
+          <button class="tool-button water" data-action="water" type="button">💧 Water</button>
+          <button class="tool-button selected" data-mold="tower" type="button">🏰 Tower</button>
+          <button class="tool-button" data-mold="turtle" type="button">🐢 Turtle</button>
+          <button class="tool-button" data-mold="volcano" type="button">🌋 Volcano</button>
+          <button class="tool-button" data-mold="monster" type="button">👾 Monster</button>
+          <button class="primary-button" data-action="decorate" type="button">Decorate ✨</button>
+        </div>
+        <div class="control-row hidden" id="decorateControls">
+          <button class="tool-button" data-decor="shell" type="button">🐚 Shell</button>
+          <button class="tool-button" data-decor="pebble" type="button">🪨 Pebble</button>
+          <button class="tool-button" data-decor="twig" type="button">🌿 Twig</button>
+          <button class="tool-button" data-decor="leaf" type="button">🍃 Leaf</button>
+          <button class="tool-button" data-decor="eyes" type="button">👀 Eyes</button>
+          <button class="primary-button" data-action="smash" type="button">SMASH TIME! 💥</button>
+        </div>
+        <div class="control-row hidden" id="smashControls">
+          <button class="tool-button" data-tool="cannon" type="button">🚿 Cannon</button>
+          <button class="tool-button" data-tool="stomp" type="button">🦖 Stomp</button>
+          <button class="tool-button" data-tool="launcher" type="button">🟤 Mud Ball</button>
+          <button class="tool-button" data-tool="balloon" type="button">🎈 Balloon</button>
+          <button class="primary-button" data-action="clean" type="button">🧽 Clean Up</button>
+        </div>
+        <div class="control-row hidden" id="cleanControls">
+          <button class="primary-button" data-action="reset" type="button">Play Again 🌈</button>
+        </div>
+      </section>
+      <p class="tip">Tip: tap, drag, and make a glorious mess. Sound starts after your first tap!</p>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
